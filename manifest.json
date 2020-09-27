@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "BC Parks Quick Buying Extension",
+  "description": "This extension allows you to quickly buy day passes on the BC Parks website",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://discovercamping.ca/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab", "https://ajax.googleapis.com/"],
+  "web_accessible_resources": ["script.js"]
+}
